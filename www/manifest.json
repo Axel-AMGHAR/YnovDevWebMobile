@@ -4,7 +4,12 @@
     "icons": [
       {
         "src": "img/logo.png",
-        "sizes": "64x64 32x32 24x24 16x16",
+        "sizes": "50x50",
+        "type": "image/png"
+      },
+      {
+        "src": "img/logos/144x144.png",
+        "sizes": "144x144",
         "type": "image/png"
       }
     ],
