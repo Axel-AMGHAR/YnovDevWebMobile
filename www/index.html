@@ -68,7 +68,7 @@
     <script>
       var OneSignal = window.OneSignal || [];
       var initConfig = {
-        appId: "0e7468fd-cf9c-4079-8af1-99e3fc4069de",
+        appId: "1c6dc194-b2c1-4162-b4cf-47803d1f31ab",
         notifyButton: {
           enable: true,
         },
@@ -81,6 +81,7 @@
         OneSignal.init(initConfig);
       });
     </script>
+
 
     <title>Ynov Dev Web Mobile</title>
   </head>
@@ -103,5 +104,29 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/mangas.js"></script>
+   
+    <button id='test'>aa</button>
   </body>
+
+  <script>
+    
+    document.getElementById('test').click(function(e) {
+    var OneSignal = window.OneSignal || [];
+  var initConfig = {
+    appId: "1c6dc194-b2c1-4162-b4cf-47803d1f31ab",
+    notifyButton: {
+      enable: true,
+    },
+  };
+  OneSignal.push(function () {
+    OneSignal.SERVICE_WORKER_PARAM = { scope: "push/onesignal/" };
+    OneSignal.SERVICE_WORKER_PATH = "push/onesignal/OneSignalSDKWorker.js";
+    OneSignal.SERVICE_WORKER_UPDATER_PATH =
+      "push/onesignal/OneSignalSDKUpdaterWorker.js";
+    OneSignal.init(initConfig);
+  });
+  })
+
+  
+</script>
 </html>
