@@ -1,4 +1,5 @@
 function onBatteryStatus(status) {
+  console.log(status);
   console.log("Battery Level Low " + status.level + "%");
 }
 
@@ -9,7 +10,9 @@ const openInAppBrowser = (link) => {
 };
 
 const toogleModalOffline = (show) => {
+  
   const modal = document.getElementById("modal-unconnect");
+  console.log(modal);
   modal.className = show ? "show" : "";
 };
 
